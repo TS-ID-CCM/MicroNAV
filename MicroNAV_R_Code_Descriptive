@@ -21,14 +21,23 @@ med_vars <- c("age", "bmi")
 # Convert 'vap' to a factor
 vap <- factor("vap")
 
-# Create a table of descriptive statistics, stratified by 'vap'
+# Create a table of descriptive statistics, stratified by 'IAM_30'
 tab1 <- CreateTableOne(vars = myVars,
                        strata = "vap",
                        data = data_microNAV,
                        factorVars = catVars)
+tab_all <- CreateTableOne(vars = myVars,
+                          data = data_microNAV,
+                          factorVars = catVars)
 
-# Print the table, specifying that non-normal variables should be displayed,
-# and applying formatting options for large numbers, including performing statistical tests
+
+# Imprimir la tabla general
+print(tab_all,
+      nonnormal = med_vars,
+      formatOptions = list(big.mark = ","),
+      test = FALSE)
+
+# Imprimir la tabla estratificada
 print(tab1,
       nonnormal = med_vars,
       formatOptions = list(big.mark = ","),
