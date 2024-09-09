@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the repository housing the dataset and associated code for the study on the respiratory microbiome and its role in Ventilator-Associated Pneumonia (VAP). This prospective observational study was conducted in an Intensive Care Unit (ICU) in Chía, Colombia, and involved 195 adult patients requiring mechanical ventilation. The dataset provides a comprehensive collection of clinical data, microbiome analysis, and inflammatory marker quantifications, offering valuable insights into the microbial ecology of VAP and its relationship with immune dysregulation.
+Welcome to the repository housing the dataset and associated code for the study on the respiratory microbiome and its role in Ventilator-Associated Pneumonia (VAP). This prospective observational study was conducted in an Intensive Care Unit (ICU) in Chía, Colombia, and involved 141 adult patients requiring mechanical ventilation. The dataset provides a comprehensive collection of clinical data, microbiome analysis, and inflammatory marker quantifications, offering valuable insights into the microbial ecology of VAP and its relationship with immune dysregulation.
 
 ## Dataset Description
 
