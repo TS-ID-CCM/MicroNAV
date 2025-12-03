@@ -53,3 +53,7 @@ This repository is licensed under the MIT License, allowing you the freedom to u
 ## Conclusion
 
 Thank you for your interest in the Respiratory Microbiome and VAP Dataset Repository. We are excited to see how this resource contributes to the understanding and treatment of Ventilator-Associated Pneumonia and related conditions in critically ill patients.
+
+## Note 
+
+**Note**: MicroNAV is maintained by TsIDCCM. For inquiries, support, or collaboration, please [contact us](mailto:nataliasahe@unisabana.edu.co).
