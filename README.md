@@ -6,12 +6,25 @@ Welcome to the repository housing the dataset and associated code for the study 
 
 ## Dataset Description
 
-The dataset contains:
+The dataset, available on Physionet, includes 845 variables collected across multiple structured time points:
 
-Clinical Data: Collected at multiple time points during ICU admission.
-Microbiome Analysis: Involves DNA extraction and 16S ribosomal gene sequencing to analyze the respiratory microbiome.
-Inflammatory Markers: Quantification of pulmonary and systemic inflammatory markers using ELISA.
-This dataset is ideal for researchers interested in studying the interplay between the respiratory microbiome, immune responses, and disease progression in critically ill patients.
+- Baseline (within 24 hours of ICU admission)
+- 72 hours
+- Day 5
+- Day 7
+- At VAP diagnosis (if applicable)
+- Post-extubation
+- At hospital discharge
+- Secondary infections during admission or after extubation
+
+**Classes of Data**
+
+- Clinical & Paraclinical Variables: Vital signs, laboratory results, comorbidities, treatments, antibiotic exposure, severity scores, outcomes.
+- Respiratory Microbiome: Operational Taxonomic Units (OTUs) identified via 16S rRNA sequencing, linked to patient IDs.
+- Inflammatory Markers: Pulmonary and systemic cytokines quantified via ELISA.
+- Outcome Variables: VAP occurrence, mortality, secondary infections, extubation, discharge metrics.
+
+A full data dictionary and variable descriptions are available on Physionet.
 
 ## Repository Structure
 
@@ -26,12 +39,12 @@ To begin working with the dataset and code in this repository, follow these step
 Familiarize Yourself with the Dataset:
 Review the dataset documentation to understand the structure, types of data included, and the scope of the study.
 Explore the R Code:
-Use the provided R scripts and notebooks to conduct basic data analysis, microbiome profiling, and statistical evaluations. These resources will guide you through data manipulation, performing descriptive statistics, and interpreting key findings.
+Use the provided R scripts and notebooks to reproduce the tables used in the data descriptor. These resources will guide you through data manipulation, performing descriptive statistics, interpreting key findings, and prepare the analytical-ready dataset for future statistical modelling and machine learning
 Engage with the Research Community:
 If you have questions, suggestions, or contributions, feel free to reach out. Collaborative efforts are crucial for advancing research in respiratory microbiology and improving ICU outcomes.
-Acknowledgement
 
-If you use the dataset or code in your research, please acknowledge the contribution by citing the dataset and the study as appropriate. Proper attribution supports the continued development and dissemination of valuable research resources.
+Acknowledgement
+If you use MicroNAV data or code, please cite the dataset and the associated data descriptor. Attribution supports open science and the continued development of translational research resources.
 
 ## License
 
