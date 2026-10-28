@@ -1,6 +1,22 @@
 #Table 1 - Data descriptor MicroNAV# 
 library(readr)
-data_microNAV <- read_csv("~/Library/CloudStorage/OneDrive-UniversidaddelaSabana/Documentos/Working on/TsIDCCM/Physionet/MicroNAV/Definitivos/MicroVAP-DatasetForPhysionet_DATA_2024-08-30_141ptes.csv")
+library(readr)
+library(tableone)
+
+# Load the MicroNAV clinical dataset.
+# Download the corresponding CSV file from PhysioNet:
+# https://doi.org/10.13026/rtc6-cq72
+#
+# Place the file in a local folder named "data".
+# Update the filename below to match the downloaded file.
+
+data_path <- file.path("data", "MicroNAV_clinical_data.csv")
+
+if (!file.exists(data_path)) {
+  stop("Dataset not found. Download the clinical CSV from PhysioNet.")
+}
+
+data_microNAV <- read_csv(data_path, show_col_types = FALSE)
 View(data_microNAV)
 
 # Convertir las variables categóricas en factores
@@ -33,10 +49,9 @@ catVars <- c("gender", "antibiotics_12months", "smoking_history", "samples_24h",
 # Define the variables for which median values should be displayed
 med_vars <- c("age", "bmi")
 
-# Convert 'vap' to a factor
-vap <- factor("vap")
 
-# Create a table of descriptive statistics, stratified by 'IAM_30'
+# Create descriptive statistics stratified by
+# ventilator-associated pneumonia (VAP) status.
 tab1 <- CreateTableOne(vars = myVars,
                        strata = "vap",
                        data = data_microNAV,
