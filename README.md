@@ -1,59 +1,94 @@
-# Respiratory Microbiome and Ventilator-Associated Pneumonia (VAP) Dataset Repository
+# MicroNAV: Clinical and microbiological data from mechanically ventilated ICU patients
 
 ## Overview
 
-Welcome to the repository housing the dataset and associated code for the study on the respiratory microbiome and its role in Ventilator-Associated Pneumonia (VAP). This prospective observational study was conducted in an Intensive Care Unit (ICU) in Chía, Colombia, and involved 141 adult patients requiring mechanical ventilation. The dataset provides a comprehensive collection of clinical data, microbiome analysis, and inflammatory marker quantifications, offering valuable insights into the microbial ecology of VAP and its relationship with immune dysregulation.
+MicroNAV is a dataset derived from a prospective observational cohort of 141 adult patients requiring mechanical ventilation in an intensive care unit in Chía, Colombia. Of these patients, 47 developed ventilator-associated pneumonia (VAP).
 
-## Dataset Description
+The dataset includes clinical, microbiological, immunological, and biochemical information collected at predefined time points during hospitalization.
 
-The dataset, available on Physionet, includes 845 variables collected across multiple structured time points:
+The objective of sharing this resource is to support reproducible research and secondary analyses investigating ventilator-associated pneumonia, respiratory microbiome composition, inflammatory responses, and clinical outcomes in critically ill patients.
 
-- Baseline (within 24 hours of ICU admission)
+## Dataset availability
+
+The MicroNAV dataset is deposited in PhysioNet.
+
+**Dataset version:** 1.1.1
+
+**DOI:** https://doi.org/10.13026/rtc6-cq72
+
+The PhysioNet repository is the authoritative source for the published dataset. Users should consult the dataset documentation, data dictionary, and access requirements before downloading or analyzing the data.
+
+Some files may require credentialed access under PhysioNet's data use requirements.
+
+## Dataset description
+
+The dataset includes information on 141 adult patients, with 845 variables documented across multiple clinical and follow-up assessments.
+
+Data collection time points include:
+
+- Baseline
 - 72 hours
 - Day 5
 - Day 7
-- At VAP diagnosis (if applicable)
-- Post-extubation
-- At hospital discharge
-- Secondary infections during admission or after extubation
+- VAP diagnosis, when applicable
+- Extubation
+- Hospital discharge
+- Secondary infection assessments
 
-**Classes of Data**
+The dataset contains clinical and laboratory measurements, microbiological information derived from respiratory samples, inflammatory markers, and clinical outcomes.
 
-- Clinical & Paraclinical Variables: Vital signs, laboratory results, comorbidities, treatments, antibiotic exposure, severity scores, outcomes.
-- Respiratory Microbiome: Operational Taxonomic Units (OTUs) identified via 16S rRNA sequencing, linked to patient IDs.
-- Inflammatory Markers: Pulmonary and systemic cytokines quantified via ELISA.
-- Outcome Variables: VAP occurrence, mortality, secondary infections, extubation, discharge metrics.
+Detailed variable definitions and file descriptions are available through PhysioNet.
 
-A full data dictionary and variable descriptions are available on Physionet.
+## Repository contents
 
-## Repository Structure
+This GitHub repository provides supporting documentation and R code associated with the MicroNAV Data Descriptor.
 
-This repository is organized to provide easy access to the dataset and the tools necessary for its analysis:
+| File | Description |
+|---|---|
+| `MicroNAV_R_Code_Descriptive.R` | R script for generating descriptive statistics for Table 1, including comparisons according to VAP status. |
+| `MicroNAV_Metadata_XLM` | Study metadata file. |
+| `README.md` | Documentation describing the dataset, repository contents, and available code. |
 
-R Code: Contains scripts and notebooks demonstrating how to perform descriptive statistics and microbiome analysis on the dataset. These resources are designed to help users understand the dataset structure, access data points, and start their analysis.
-Dataset Documentation: Provides detailed descriptions of the variables, the data collection process, and the methods used in microbiome analysis and inflammatory marker quantification.
-Getting Started
+The publicly available R script focuses on descriptive statistical analyses. This repository should not be interpreted as containing the complete laboratory or bioinformatics processing pipelines unless additional scripts are deposited.
 
-To begin working with the dataset and code in this repository, follow these steps:
+## Requirements
 
-Familiarize Yourself with the Dataset:
-Review the dataset documentation to understand the structure, types of data included, and the scope of the study.
-Explore the R Code:
-Use the provided R scripts and notebooks to reproduce the tables used in the data descriptor. These resources will guide you through data manipulation, performing descriptive statistics, interpreting key findings, and prepare the analytical-ready dataset for future statistical modelling and machine learning
-Engage with the Research Community:
-If you have questions, suggestions, or contributions, feel free to reach out. Collaborative efforts are crucial for advancing research in respiratory microbiology and improving ICU outcomes.
+The descriptive R script uses the following packages:
 
-Acknowledgement
-If you use MicroNAV data or code, please cite the dataset and the associated data descriptor. Attribution supports open science and the continued development of translational research resources.
+- `readr`
+- `tableone`
 
-## License
+## Reproducing the descriptive analysis
 
-This repository is licensed under the MIT License, allowing you the freedom to use, modify, and distribute the software, provided that the license and copyright notice are included with any substantial portions of the software. For more details, please refer to the LICENSE file in this repository.
+1. Obtain the relevant clinical dataset from PhysioNet version 1.1.1.
+2. Review the data dictionary and confirm that the required variables are available.
+3. Download the R script from this repository.
+4. Install the required R packages.
+5. Configure the input file path according to the instructions in the script.
+6. Execute the script to generate descriptive statistics.
 
-## Conclusion
+The script generates overall and VAP-stratified descriptive summaries.
 
-Thank you for your interest in the Respiratory Microbiome and VAP Dataset Repository. We are excited to see how this resource contributes to the understanding and treatment of Ventilator-Associated Pneumonia and related conditions in critically ill patients.
+Users should verify the coding of categorical variables, missing values, and statistical testing assumptions before interpreting the results.
 
-## Note 
+## Data documentation and reproducibility
 
-**Note**: MicroNAV is maintained by TsIDCCM. For inquiries, support, or collaboration, please [contact us](mailto:nataliasahe@unisabana.edu.co).
+The published PhysioNet dataset should be used as the primary source of data.
+
+The GitHub repository provides supplementary code and documentation. Availability of descriptive analysis code does not imply that all procedures used for microbiological sequencing, immunological assays, biochemical processing, or original dataset construction are reproducible from the files currently deposited here.
+
+## Citation
+
+If you use the MicroNAV dataset, please cite the version-specific PhysioNet record:
+
+https://doi.org/10.13026/rtc6-cq72
+
+Please also cite the associated *Scientific Data* Data Descriptor once published.
+
+## Contact
+
+MicroNAV is maintained by the Translational Science in Infectious Diseases and Critical Care Medicine research team (TS-ID-CCM).
+
+For questions regarding the dataset or supporting code, please contact:
+
+nataliasahe@unisabana.edu.co
